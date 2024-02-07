@@ -9,11 +9,48 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5rem;
+  padding: 0 5rem;
+  border: 1px solid #0077b6;
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
 }
 
 .links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  justify-content: center;
+  gap: 6rem;
+  padding-right: 15rem;
+
+  a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.6rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid #333;
+      position: absolute;
+      right: -18px;
+      top: 60%;
+      transform: translateY(-50%);
+    }
+
+    // &:hover {
+    //   background-color: #f0f0f0;
+    // }
+  }
+}
+
+.links a.with-dropdown::after {
+  content: '';
+  font-size: 0.8rem;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
