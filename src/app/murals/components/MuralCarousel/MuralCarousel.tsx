@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import styles from './MuralCarousel.module.scss';
+import './MuralCarousel.module.scss';
 
-const murals = [
+const murals: string | any[] = [
   // mural images will be placed here, do in the future
   
 ];
@@ -22,9 +22,9 @@ function MuralCarousel() {
     setCurrentIndex(newIndex);
   };
 
-  // stayling for the carousel, including with buttons
+  // styling for the carousel, including the buttons
   return (
-    <div className={styles.carousel}>
+    <div className={"carousel"}>
       <button className={styles.prev} onClick={goToPrevious}>&lt;</button>
       <img src={murals[currentIndex]} alt={`Mural ${currentIndex + 1}`} className={styles.image}/>
       <button className={styles.next} onClick={goToNext}>&gt;</button>
