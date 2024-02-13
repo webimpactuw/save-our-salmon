@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
-import './MuralCarousel.module.scss';
+import styles from './MuralCarousel.module.scss';
 
 const murals: string | any[] = [
   // mural images will be placed here, do in the future
   
 ];
+
+declare module '*.module.scss' {
+  const classes: { [key: string]: string };
+  export default classes;
+}
 
 function MuralCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,6 +20,7 @@ function MuralCarousel() {
     const newIndex = isFirstImage ? murals.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
+  
   // scrolling to the next page in the carousel
   const goToNext = () => {
     const isLastImage = currentIndex === murals.length - 1;
