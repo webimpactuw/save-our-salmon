@@ -14,8 +14,8 @@ const Home = () => {
       </video>
 
       <nav className={styles.nav}>
-        <div style={{ position: 'absolute', width: '120px', height: '100px', left: '31px', top: '15px'}}>
-        <Image src="/SOSTA color white.png" alt="Save Our Salmon" width={100} height={75} />
+        <div style={{marginTop: '15px'}}>
+        <Image src="/SOSTA color gray.png" alt="Save Our Salmon" width={100} height={75} />
         </div>
         {/* <div>SAVE OUR SALMON</div> */}
         <div className={styles.links}>
@@ -30,23 +30,23 @@ const Home = () => {
 
         {/* I tried using imported logos, but I can just do 4 images if we want it exactly like
         the design */}
-        {/*<div className={styles.socials}>
+        <div className={styles.socials}>
           <Link href="https://www.youtube.com/@AustinsAwesomeArt"><FaYoutube /></Link>
           <Link href="https://www.instagram.com/salmonmural/"><FaInstagram /></Link>
           <Link href="https://www.linkedin.com/company/salmonmurals/about/"><FaLinkedin /></Link>
           <Link href="https://www.facebook.com/austins.awesome.art/"><FaFacebookF /></Link>
-      </div>*/}
+      </div>
       </nav>
-      {/*<div className={styles.title1}>
-        <h1 style={{marginTop: '20rem'}}>Austin's Awesome Art</h1>
-        <div style={{ position: 'relative', width: '100vw', height: '75px', marginTop: '20rem' }}>
+      <div className={styles.title1}>
+        <h1 style={{marginTop: '50rem', fontSize: '2.5rem', color: 'white'}}>Saving Salmon, Through Art</h1>
+        {/*<div style={{ position: 'relative', width: '100vw', height: '75px', marginTop: '20rem' }}>
           <Image
             src="/Vector1.png"
             alt="Line Design"
             layout="fill"
           />
-      </div>
       </div>*/}
+      </div>
 
       
     </main>
