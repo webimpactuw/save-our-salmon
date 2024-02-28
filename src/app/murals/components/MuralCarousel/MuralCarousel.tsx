@@ -1,40 +1,37 @@
 import React, { useState } from 'react';
-import styles from './MuralCarousel.module.scss';
+import JuanitaImg from '../public/Mural - Juanita/Juanita-mural.jpg';
+import McAleerImg from '../public/Mural - McAleer/LFP-McAleer-mural.png';
+import USGCWesternImg from '../public/Mural - USGS/USGS-Mural-Magnuson-Park-Seattle.jpg';
 
-const murals: string | any[] = [
-  // mural images will be placed here, do in the future
-  
+// images for the mural carousel
+const images = [
+  JuanitaImg,
+  McAleerImg,
+  USGCWesternImg,
 ];
 
-declare module '*.module.scss' {
-  const classes: { [key: string]: string };
-  export default classes;
-}
-
 function MuralCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [current, setCurrent] = useState(0);
+  const length = images.length;
 
-  // scrolling to the previous page in the carousel
-  const goToPrevious = () => {
-    const isFirstImage = currentIndex === 0;
-    const newIndex = isFirstImage ? murals.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-  
-  // scrolling to the next page in the carousel
-  const goToNext = () => {
-    const isLastImage = currentIndex === murals.length - 1;
-    const newIndex = isLastImage ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
   };
 
-  // styling for the carousel, including the buttons
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
+
   return (
-    <div className={"carousel"}>
-      <button className={styles.prev} onClick={goToPrevious}>&lt;</button>
-      <img src={murals[currentIndex]} alt={`Mural ${currentIndex + 1}`} className={styles.image}/>
-      <button className={styles.next} onClick={goToNext}>&gt;</button>
-    </div>
+    <section className="carousel">
+      <button onClick={prevSlide}>Prev</button>
+      {images.map((img, index) => (
+        <div key={index} className={index === current ? 'slide active' : 'slide'}>
+          {index === current && (<img src={img} alt={'Image ' + index} />)}
+        </div>
+      ))}
+      <button onClick={nextSlide}>Next</button>
+    </section>
   );
 }
 
