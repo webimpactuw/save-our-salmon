@@ -10,7 +10,6 @@ const images: string[] = [
   USGCWesternImg as unknown as string,
 ];
 
-
 function MuralCarousel() {
   const [current, setCurrent] = useState(0);
   const length = images.length;
