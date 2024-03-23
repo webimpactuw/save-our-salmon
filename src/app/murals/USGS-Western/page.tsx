@@ -7,7 +7,7 @@ import MuralCarousel from '../components/MuralCarousel/MuralCarousel'; // Adjust
 import MuralMap from '../components/MuralMap/MuralMap'; // Adjust path
 import MuralFooter from '../components/MuralFooter/MuralFooter'; // Adjust path
 
-function McAleerCreekPage() {
+function USGSCreekPage() {
   return (
     <div>
     <MuralHeader />
@@ -19,4 +19,4 @@ function McAleerCreekPage() {
   );
 }
 
-export default McAleerCreekPage;
+export default USGSCreekPage;

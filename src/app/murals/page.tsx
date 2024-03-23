@@ -1,22 +1,32 @@
-// MuralPage.tsx
 import React from 'react';
-import MuralHeader from './MuralHeader/MuralHeader';
-import MuralHero from './MuralHero/MuralHero'; // Assuming you have a Hero component as well
-import MuralCarousel from './MuralCarousel/MuralCarousel';
-import MuralMap from './MuralMap/MuralMap';
-import MuralFooter from './MuralFooter/MuralFooter';
-import styles from './MuralPage.module.scss';
 
-const MuralPage: React.FC = () => {
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+
+// Optionally import SCSS for styling
+import './page.module.scss';
+
+// Import your page components
+import Juanita from './Juanita-Creek/JuanitaCreekPage';
+import McAleer from './McAleer-Creek/McAleerCreekPage';
+import USGS from './USGS-Western/USGSCreekPage';
+
+const MainPage = () => {
   return (
-    <div className={styles.muralPage}>
-      <MuralHeader />
-      <MuralHero />
-      <MuralCarousel />
-      <MuralMap />
-      <MuralFooter />
-    </div>
+    <Swiper
+      spaceBetween={50}
+      slidesPerView={1}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper: any) => console.log(swiper)}
+    >
+      <SwiperSlide><Juanita /></SwiperSlide>
+      <SwiperSlide><McAleer /></SwiperSlide>
+      <SwiperSlide><USGS /></SwiperSlide>
+    </Swiper>
   );
 };
 
-export default MuralPage;
+export default MainPage;
