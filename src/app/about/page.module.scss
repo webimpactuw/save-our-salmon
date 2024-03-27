@@ -1,3 +1,4 @@
+
 .title {
     text-align: center;
     margin: 200px;
@@ -5,25 +6,49 @@
 }
 
 .h1 {
+    font-family: 'Inter';
     font-size: 40px;
-    font-weight: 550;
 }
 
 .h2 {
+    font-family: 'Inter';
     font-style: italic;
     font-size: 30px;
-    font-weight: 550;
     text-align: center;
 }
 
 .h3 {
-    font-size: 27.5px;
+    font-family: 'Inter';
+    font-size: 28px;
     font-weight: normal;
 }
 .h3center {
+    font-family: 'Inter';
     text-align: center;
-    font-size: 25px;
+    font-size: 28px;
     font-weight: normal;
+}
+.h3left {
+    font-family: 'Inter';
+    font-size: 28px;
+    font-weight: normal;
+    margin-left: 154px;
+}
+.h3small {
+    font-family: 'Inter';
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 100px;
+}
+
+.h4 {
+    font-family: 'Inter';
+    font-style: italic;
+    font-size: 50px;
+    color: #B32316;
+    text-align: center;
+    margin-right: 100px;
 }
 
 .line1 {
@@ -35,17 +60,22 @@
 .line2 {
     display: flex;
     justify-content: center;
-    margin-top: 150px;  
-    margin-bottom: 50px;
+    margin-top: 125px;  
+    margin-bottom: 75px;
 }
 
-.imagetext1 {
+.imagetext {
     display: flex;
     justify-content: space-evenly;
 
     .image1 {
         scale: 1.15;
     }
+}
+
+.statistics {
+    display: flex;
+    justify-content: center;
 }
 
 

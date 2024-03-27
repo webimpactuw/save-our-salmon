@@ -4,10 +4,10 @@ import McAleerImg from '../public/Mural - McAleer/LFP-McAleer-mural.png';
 import USGCWesternImg from '../public/Mural - USGS/USGS-Mural-Magnuson-Park-Seattle.jpg';
 
 // images for the mural carousel
-const images = [
-  JuanitaImg,
-  McAleerImg,
-  USGCWesternImg,
+const images: string[] = [
+  JuanitaImg as unknown as string,
+  McAleerImg as unknown as string,
+  USGCWesternImg as unknown as string,
 ];
 
 function MuralCarousel() {
@@ -25,11 +25,11 @@ function MuralCarousel() {
   return (
     <section className="carousel">
       <button onClick={prevSlide}>Prev</button>
-      {images.map((img, index) => (
-        <div key={index} className={index === current ? 'slide active' : 'slide'}>
-          {index === current && (<img src={img} alt={'Image ' + index} />)}
-        </div>
-      ))}
+      {images.map((imageSrc, index) => (
+  <div key={index} className="carousel-slide">
+    <img src={imageSrc} alt={`Image ${index}`} />
+  </div>
+))}
       <button onClick={nextSlide}>Next</button>
     </section>
   );

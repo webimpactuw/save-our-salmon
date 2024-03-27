@@ -1,0 +1,18 @@
+.muralMap {
+    padding: 20px;
+    background-color: #f9f9f9; // A light background color for the map area
+  
+    .mapContainer {
+      margin: 0 auto;
+      max-width: 1200px; // Adjust this width as necessary
+      height: 400px; // Adjust the height based on your preference
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1); // Optional: adds some depth to the map container
+      border-radius: 8px; // Optional: rounds the corners of the map container
+  
+      iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px; // Ensures the iframe also has rounded corners if the container does
+      }
+    }
+  }  

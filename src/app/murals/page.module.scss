@@ -1,0 +1,22 @@
+// MuralPage.module.scss
+.muralPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  .muralCarousel {
+    margin-top: 20px;
+  }
+  
+  .muralMap {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1200px; // adjustable width
+  }
+  
+  .muralFooter {
+    margin-top: auto; // Pushes the footer to the bottom if the content is not tall enough
+  }
