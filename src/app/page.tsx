@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FaYoutube, FaInstagram, FaLinkedin, FaFacebookF } from 'react-icons/fa';
 import styles from './page.module.scss';
+import Map from './components/Map';
 
 const Home = () => {
   return (
@@ -47,6 +48,10 @@ const Home = () => {
           />
       </div>*/}
       </div>
+
+      {/* <div className={styles.map}> 
+        <Map />
+      </div> */}
 
       
     </main>
