@@ -20,12 +20,12 @@
   align-items: center;
 }
 
-.socials svg {
-  font-size: 2rem;
-  margin-right: 2rem;
-  cursor: pointer;
-  color: black;
-}
+// .socials svg {
+//   font-size: 2rem;
+//   margin-right: 2rem;
+//   cursor: pointer;
+//   color: black;
+// }
 
 // Currently just has placeholder dropdown arrows
 .links {
@@ -37,9 +37,9 @@
 
   a {
     color: black;
-    text-decoration: none;
     font-size: 1.6rem;
     position: relative;
+    text-decoration-color: white;
     // text-shadow: -1px -1px 0 #0077b6, 1px -1px 0 #0077b6, -1px 1px 0 #0077b6, 1px 1px 0 #0077b6; /* Blue outline */
 
     &::after {
@@ -56,9 +56,11 @@
       transform: translateY(-50%);
     }
 
-    // &:hover {
-    //   background-color: #f0f0f0;
-    // }
+    &:hover {
+      background-color: #f0f0f0;
+      text-decoration-style: wavy;
+      text-decoration-color: #0077b6;
+    }
   }
 }
 

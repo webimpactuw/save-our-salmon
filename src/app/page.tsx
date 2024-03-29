@@ -7,7 +7,7 @@ import Map from './components/Map';
 const Home = () => {
   return (
     <main className={styles.main}>
-      
+
         {/* v include autoPlay before muted to autoplay */}
       <video muted loop id="backgroundVideo" style={{ position: 'fixed', right: '0', bottom: '0', top: '0', minWidth: '100%', minHeight: '100%', zIndex: '-1' }}>
         <source src="/SOS-Homepage-video.mp4" type="video/mp4" />
@@ -23,7 +23,7 @@ const Home = () => {
           <Link href="/murals" className='with-dropdown'>Murals</Link>
           <Link href="/events">Events</Link>
           <Link href="/shop">Shop</Link>
-          <Link href="/about">About Us</Link> 
+          <Link href="/about">About Us</Link>
           <Link href="/resources">Resources</Link>
         </div>
 
@@ -31,12 +31,12 @@ const Home = () => {
 
         {/* I tried using imported logos, but I can just do 4 images if we want it exactly like
         the design */}
-        <div className={styles.socials}>
+        {/* <div className={styles.socials}>
           <Link href="https://www.youtube.com/@AustinsAwesomeArt"><FaYoutube /></Link>
           <Link href="https://www.instagram.com/salmonmural/"><FaInstagram /></Link>
           <Link href="https://www.linkedin.com/company/salmonmurals/about/"><FaLinkedin /></Link>
           <Link href="https://www.facebook.com/austins.awesome.art/"><FaFacebookF /></Link>
-      </div>
+      </div> */}
       </nav>
       <div className={styles.title1}>
         <h1 style={{marginTop: '50rem', fontSize: '2.5rem', color: 'white'}}>Saving Salmon, Through Art</h1>
@@ -49,11 +49,10 @@ const Home = () => {
       </div>*/}
       </div>
 
-      {/* <div className={styles.map}> 
+      {/* <div className={styles.map}>
         <Map />
       </div> */}
 
-      
     </main>
   );
 };
