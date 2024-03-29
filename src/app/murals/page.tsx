@@ -13,9 +13,9 @@ import Juanita from '@/app/murals/Juanita-Creek/JuanitaCreekPage';
 import McAleer from '@/app/murals/McAleer-Creek/McAleerCreekPage';
 import USGS from '@/app/murals/USGS-Western/USGSCreekPage';
 
+
 const MainPage = () => {
   return (
-    <>
       <div className='max-w-[600px] mx-auto'>
         <Carousel showArrows={true} autoPlay={true} interval={3000} infiniteLoop={true} showThumbs={false}>
             <div>
@@ -29,7 +29,6 @@ const MainPage = () => {
             </div>
         </Carousel>
       </div>
-    </>
   );
 };
 

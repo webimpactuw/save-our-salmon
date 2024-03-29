@@ -10,11 +10,11 @@ import MuralFooter from '../components/MuralFooter/MuralFooter'; // Adjust path
 function JuanitaCreekPage() {
   return (
     <div>
-      <MuralHeader />
-      <MuralHero/> 
+      {/* <MuralHeader />
+      <MuralHero/>  */}
       <MuralCarousel/> 
-      <MuralMap />
-      <MuralFooter />
+      {/* <MuralMap />
+      <MuralFooter /> */}
     </div>
   );
 }
