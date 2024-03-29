@@ -1,14 +1,22 @@
+"use client";
 import React, { useState } from 'react';
-import JuanitaImg from '../public/Mural - Juanita/Juanita-mural.jpg';
-import McAleerImg from '../public/Mural - McAleer/LFP-McAleer-mural.png';
-import USGCWesternImg from '../public/Mural - USGS/USGS-Mural-Magnuson-Park-Seattle.jpg';
+import JuanitaImg from './Juanita-mural.jpg';
+import McAleerImg from './LFP-McAleer-mural.png';
+import USGCWesternImg from './USGS-Mural-Magnuson-Park-Seattle.jpg';
+import styles from './MuralCarousel.module.scss';
 
 // images for the mural carousel
 const images: string[] = [
-  JuanitaImg as unknown as string,
-  McAleerImg as unknown as string,
-  USGCWesternImg as unknown as string,
+  './Juanita-mural.jpg',
+  './LFP-McAleer-mural.png',
+  './USGS-Mural-Magnuson-Park-Seattle.jpg'
 ];
+/* 
+const paths: string[] = 
+['../../../../public/Mural - Juanita/Juanita-mural.jpg', 
+'../../../../public/Mural - McAleer/LFP-McAleer-mural.png', 
+'../../../../public/Mural - USGS/USGS-Mural-Magnuson-Park-Seattle.jpg']
+*/
 
 function MuralCarousel() {
   const [current, setCurrent] = useState(0);

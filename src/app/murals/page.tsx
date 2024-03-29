@@ -1,18 +1,32 @@
+"use client";
+
 import React from 'react';
 
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
+// import Swiper JS
+import Swiper from 'swiper';
+// import Swiper styles
 import 'swiper/css';
+
+import { Navigation, Pagination } from 'swiper/modules';
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+// init Swiper:
+const swiper = new Swiper('.swiper', {
+  // configure Swiper to use modules
+  modules: [Navigation, Pagination],
+});
+
 
 // Optionally import SCSS for styling
 import './page.module.scss';
 
 // Import your page components
-import Juanita from './Juanita-Creek/JuanitaCreekPage';
-import McAleer from './McAleer-Creek/McAleerCreekPage';
-import USGS from './USGS-Western/USGSCreekPage';
+import Juanita from '@/app/murals/Juanita-Creek/JuanitaCreekPage';
+import McAleer from '@/app/murals/McAleer-Creek/McAleerCreekPage';
+import USGS from '@/app/murals/USGS-Western/USGSCreekPage';
 
 const MainPage = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import './MuralHero.scss';
+import styles from './MuralHero.module.scss';
 
 // placeholder sections for the MuralHero component, subject to change in the future based on the client.
 // placeholders at left box and right box, also with the banner text.
