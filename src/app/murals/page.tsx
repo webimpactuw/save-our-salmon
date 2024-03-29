@@ -2,26 +2,11 @@
 
 import React from 'react';
 
-// import Swiper JS
-import Swiper from 'swiper';
-// import Swiper styles
-import 'swiper/css';
-
-import { Navigation, Pagination } from 'swiper/modules';
-// import Swiper and modules styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
-// init Swiper:
-const swiper = new Swiper('.swiper', {
-  // configure Swiper to use modules
-  modules: [Navigation, Pagination],
-});
-
-
 // Optionally import SCSS for styling
 import './page.module.scss';
+
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 // Import your page components
 import Juanita from '@/app/murals/Juanita-Creek/JuanitaCreekPage';
@@ -30,16 +15,21 @@ import USGS from '@/app/murals/USGS-Western/USGSCreekPage';
 
 const MainPage = () => {
   return (
-    <Swiper
-      spaceBetween={50}
-      slidesPerView={1}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper: any) => console.log(swiper)}
-    >
-      <SwiperSlide><Juanita /></SwiperSlide>
-      <SwiperSlide><McAleer /></SwiperSlide>
-      <SwiperSlide><USGS /></SwiperSlide>
-    </Swiper>
+    <>
+      <div className='max-w-[600px] mx-auto'>
+        <Carousel showArrows={true} autoPlay={true} interval={3000} infiniteLoop={true} showThumbs={false}>
+            <div>
+                <Juanita/>
+            </div>
+            <div>
+                {/* <McAleer/> */}2
+            </div>
+            <div>
+                {/* <USGS /> */}3
+            </div>
+        </Carousel>
+      </div>
+    </>
   );
 };
 
