@@ -29,20 +29,22 @@ export default function RootLayout({
       <body className={`${interTight.className} ${styles.layout}`}>
         <nav className={styles.nav}>
           <div className={styles.navLayout}>
-            <Image
-              src="/SOSTA color gray.png"
-              alt="Save Our Salmon"
-              width={100}
-              height={75}
-              className={styles.logo}
-            />
+            <UnstyledLink href="/">
+              <Image
+                src="/SOSTA color gray.png"
+                alt="Save Our Salmon"
+                width={100}
+                height={75}
+                className={styles.logo}
+              />
+            </UnstyledLink>
             {/* <div>SAVE OUR SALMON</div> */}
             <div className={styles.links}>
+              <Link href="/about">About</Link>
               <Link href="/murals">Murals</Link>
               <Link href="/events">Events</Link>
-              <Link href="/shop">Shop</Link>
-              <Link href="/about">About Us</Link>
               <Link href="/resources">Resources</Link>
+              <Link href="/shop">Shop</Link>
             </div>
           </div>
 

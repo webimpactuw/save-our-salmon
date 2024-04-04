@@ -8,6 +8,7 @@
 .videoWrapper {
   position: relative;
   height: 100vh;
+  margin-top: 5rem;
   z-index: -1;
 
   .shade {
@@ -21,7 +22,7 @@
   }
 
   .video {
-    width: 100%;
+    height: 100%;
   }
 }
 
