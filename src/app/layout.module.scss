@@ -95,7 +95,7 @@
   margin-right: auto;
   margin-right: 2.5rem;
   padding-bottom: 2rem;
-  gap: 7.5rem;
+  gap: 5rem;
 
   a {
     color: #0d70a9;
@@ -109,7 +109,7 @@
     &:hover {
       text-decoration: underline;
       text-decoration-style: wavy;
-      text-decoration-color: var(--deep-blue);
+      text-decoration-color: var(--red);
     }
   }
 }

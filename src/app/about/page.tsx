@@ -7,6 +7,7 @@ export default function AboutHome() {
     <div>
       <div className={styles.splash}>
         <div className={styles.shade} />
+        <div className={styles.name}>ABOUT</div>
         <img src="/SOS Austin.jpg" />
       </div>
       <div className={styles.waveTop1} />
