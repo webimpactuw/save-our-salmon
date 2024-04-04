@@ -44,7 +44,7 @@ export default function RootLayout({
                 <Link href="/about">About</Link>
                 <Link href="/murals">Murals</Link>
                 <Link href="/events">Events</Link>
-                <Link href="/resources">Resources</Link>
+                {/* <Link href="/resources">Resources</Link> */}
                 <Link href="/shop">Shop</Link>
               </div>
             </div>
