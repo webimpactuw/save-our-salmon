@@ -1,58 +1,66 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { FaYoutube, FaInstagram, FaLinkedin, FaFacebookF } from 'react-icons/fa';
 import styles from './page.module.scss';
 import Map from './components/Map';
 
 const Home = () => {
   return (
     <main className={styles.main}>
-
-        {/* v include autoPlay before muted to autoplay */}
-      <video muted loop id="backgroundVideo" style={{ position: 'fixed', right: '0', bottom: '0', top: '0', minWidth: '100%', minHeight: '100%', zIndex: '-1' }}>
-        <source src="/SOS-Homepage-video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <nav className={styles.nav}>
-        <div style={{marginTop: '15px'}}>
-        <Image src="/SOSTA color gray.png" alt="Save Our Salmon" width={100} height={75} />
-        </div>
-        {/* <div>SAVE OUR SALMON</div> */}
-        <div className={styles.links}>
-          <Link href="/murals" className='with-dropdown'>Murals</Link>
-          <Link href="/events">Events</Link>
-          <Link href="/shop">Shop</Link>
-          <Link href="/about">About Us</Link>
-          <Link href="/resources">Resources</Link>
-        </div>
-
-        {/* This is the section I had worked on before but it may have been wrong? */}
-
-        {/* I tried using imported logos, but I can just do 4 images if we want it exactly like
-        the design */}
-        {/* <div className={styles.socials}>
-          <Link href="https://www.youtube.com/@AustinsAwesomeArt"><FaYoutube /></Link>
-          <Link href="https://www.instagram.com/salmonmural/"><FaInstagram /></Link>
-          <Link href="https://www.linkedin.com/company/salmonmurals/about/"><FaLinkedin /></Link>
-          <Link href="https://www.facebook.com/austins.awesome.art/"><FaFacebookF /></Link>
-      </div> */}
-      </nav>
-      <div className={styles.title1}>
-        <h1 style={{marginTop: '50rem', fontSize: '2.5rem', color: 'white'}}>Saving Salmon, Through Art</h1>
-        {/*<div style={{ position: 'relative', width: '100vw', height: '75px', marginTop: '20rem' }}>
-          <Image
-            src="/Vector1.png"
-            alt="Line Design"
-            layout="fill"
-          />
-      </div>*/}
+      <div className={styles.videoWrapper}>
+        <div className={styles.shade} />
+        <video
+          className={styles.video}
+          src="/SOS-Homepage-video.mp4"
+          autoPlay
+          muted
+          loop
+        />
       </div>
-
-      {/* <div className={styles.map}>
-        <Map />
-      </div> */}
-
+      <div className={styles.center}>
+        <div className={styles.waveTop1}></div>
+        <div className={styles.tagline}>Public Art with a Purpose.</div>
+        <p className={styles.whatWeDo}>
+          The Save Our Salmon (SOS) Mural Initiative educates, engages,
+          inspires, and empowers communities to restore Puget Sound
+          salmon-spawning streams - through art. With SOS, we:
+        </p>
+      </div>
+      <div className={styles.waveTop2}></div>
+      <div className={styles.waveTop3}></div>
+      <div className={styles.waveBetween1}>
+        <div className={styles.whatWeDoItem}>
+          <i>Brighten Up</i> Communities with Vibrant Art
+        </div>
+        <div className={styles.whatWeDoItem}>
+          <i>Engage</i> Community in Community Paint Days
+        </div>
+        <div className={styles.whatWeDoItem}>
+          <i>Bring Awareness and Action</i> Restoring PNW Streams
+        </div>
+      </div>
+      <div className={styles.waveBottom2}></div>
+      <div className={styles.waveBottom1}></div>
+      <div className={styles.statsWrapper}>
+        <div>
+          <div className={styles.moneyRaised}>$26K+</div>
+          <div className={styles.subtitle}>
+            Raised for Stream Education & Restoration
+          </div>
+        </div>
+        <div className={styles.statRow}>
+          <div className={styles.stat}>
+            <div className={styles.statNumber}>4+</div>
+            <div className={styles.statName}>Murals</div>
+          </div>
+          <div className={styles.stat}>
+            <div className={styles.statNumber}>700+</div>
+            <div className={styles.statName}>Painters</div>
+          </div>
+          <div className={styles.stat}>
+            <div className={styles.statNumber}>40+</div>
+            <div className={styles.statName}>Community Groups</div>
+          </div>
+        </div>
+        <div></div>
+      </div>
     </main>
   );
 };
