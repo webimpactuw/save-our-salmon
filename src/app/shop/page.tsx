@@ -86,7 +86,7 @@ export default function CarouselComp() {
                 <img src="https://i.etsystatic.com/22055441/c/2284/1816/410/136/il/0ac6ba/4193317430/il_640xN.4193317430_o8i6.jpg" />
                 <div className={styles.info}>
                   <div className={styles.name}>
-                    4x3.4" Sticker "Save Our Salmon"
+                    4x3.4&quot; Sticker &ldquo;Save Our Salmon&rdquo;
                   </div>
                   <div className={styles.price}>$4.00</div>
                 </div>
@@ -97,7 +97,7 @@ export default function CarouselComp() {
                 <img src="https://i.etsystatic.com/22055441/c/3000/2250/0/0/il/a4d80b/5438273396/il_640xN.5438273396_9upy.jpg" />
                 <div className={styles.info}>
                   <div className={styles.name}>
-                    3.5" Sticker set "Sockeye Salmon"
+                    3.5&quot; Sticker set &ldquo;Sockeye Salmon&rdquo;
                   </div>
                   <div className={styles.price}>$8.00</div>
                 </div>
@@ -108,7 +108,7 @@ export default function CarouselComp() {
                 <img src="https://i.etsystatic.com/22055441/r/il/3b1569/3988398374/il_1588xN.3988398374_hee6.jpg" />
                 <div className={styles.info}>
                   <div className={styles.name}>
-                    4.1x3.7" Sticker "Save Our Salmon"
+                    4.1x3.7&quot; Sticker &ldquo;Save Our Salmon&rdquo;
                   </div>
                   <div className={styles.price}>$4.00</div>
                 </div>
@@ -131,7 +131,8 @@ export default function CarouselComp() {
                 <img src="https://i.etsystatic.com/22055441/r/il/e65d0a/5521526068/il_1588xN.5521526068_nn1d.jpg" />
                 <div className={styles.info}>
                   <div className={styles.name}>
-                    4x2.7" Sticker "Steelhead Salmon" Rainbow Trout
+                    4x2.7&quot; Sticker &ldquo;Steelhead Salmon&rdquo; Rainbow
+                    Trout
                   </div>
                   <div className={styles.price}>$4.00</div>
                 </div>
@@ -142,8 +143,8 @@ export default function CarouselComp() {
                 <img src="https://i.etsystatic.com/22055441/r/il/ab3899/3855302129/il_1588xN.3855302129_p5pd.jpg" />
                 <div className={styles.info}>
                   <div className={styles.name}>
-                    3.2x2.9" Sticker "Heron Flying" - Great Blue Heron Wetland
-                    Art
+                    3.2x2.9&quot; Sticker &ldquo;Heron Flying&rdquo; - Great
+                    Blue Heron Wetland Art
                   </div>
                   <div className={styles.price}>$4.00</div>
                 </div>
@@ -154,8 +155,8 @@ export default function CarouselComp() {
                 <img src="https://i.etsystatic.com/22055441/r/il/f00381/5521534020/il_1588xN.5521534020_iypo.jpg" />
                 <div className={styles.info}>
                   <div className={styles.name}>
-                    3.7x2.7" Sticker "Scuba Diver" Research Diver - USGS Western
-                    Fisheries Research Center
+                    3.7x2.7&quot; Sticker &ldquo;Scuba Diver&rdquo; Research
+                    Diver - USGS Western Fisheries Research Center
                   </div>
                   <div className={styles.price}>$4.00</div>
                 </div>
@@ -166,8 +167,8 @@ export default function CarouselComp() {
                 <img src="https://i.etsystatic.com/22055441/r/il/0bbc6a/5521537736/il_1588xN.5521537736_qyhd.jpg" />
                 <div className={styles.info}>
                   <div className={styles.name}>
-                    4x2.4" Sticker "Research Vessel" Boat - USGS Western
-                    Fisheries Research Center
+                    4x2.4&quot; Sticker &ldquo;Research Vessel&rdquo; Boat -
+                    USGS Western Fisheries Research Center
                   </div>
                   <div className={styles.price}>$4.00</div>
                 </div>
