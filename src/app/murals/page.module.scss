@@ -1,22 +1,92 @@
+.wrapper {
+  margin: 15rem 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.murals {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 2.5rem 5rem;
+
+  .mural {
+    position: relative;
+    width: 100%;
+    height: 60rem;
+    border-radius: 2.5px;
+    overflow: hidden;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      color: rgba(245, 245, 245, 1);
+      font-size: 7rem;
+      font-weight: 900;
+      background-color: rgba(0, 0, 0, 0.35);
+      transition: opacity 0.25s;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.mapWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7.5rem;
+  padding: 0 5rem;
+
+  .title {
+    margin-bottom: 3.5rem;
+    color: var(--red);
+    font-size: 6.5rem;
+    font-weight: 800;
+  }
+
+  .map {
+    width: 100%;
+    height: 60rem;
+    border: none;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+}
+
 // MuralPage.module.scss
 .muralPage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-  }
-  
-  .muralCarousel {
-    margin-top: 20px;
-  }
-  
-  .muralMap {
-    margin-top: 40px;
-    width: 100%;
-    max-width: 1200px; // adjustable width
-  }
-  
-  .muralFooter {
-    margin-top: auto; // Pushes the footer to the bottom if the content is not tall enough
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.muralCarousel {
+  margin-top: 20px;
+}
+
+.muralMap {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 1200px; // adjustable width
+}
+
+.muralFooter {
+  margin-top: auto; // Pushes the footer to the bottom if the content is not tall enough
+}

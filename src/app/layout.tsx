@@ -26,81 +26,72 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${interTight.className} ${styles.layout}`}>
-        <nav className={styles.nav}>
-          <div className={styles.navLayout}>
-            <UnstyledLink href="/">
-              <Image
-                src="/SOSTA color gray.png"
-                alt="Save Our Salmon"
-                width={100}
-                height={75}
-                className={styles.logo}
-              />
-            </UnstyledLink>
-            {/* <div>SAVE OUR SALMON</div> */}
-            <div className={styles.links}>
-              <Link href="/about">About</Link>
-              <Link href="/murals">Murals</Link>
-              <Link href="/events">Events</Link>
-              <Link href="/resources">Resources</Link>
-              <Link href="/shop">Shop</Link>
+      <body className={`${interTight.className}`}>
+        <div className={styles.layout}>
+          <nav className={styles.nav}>
+            <div className={styles.navLayout}>
+              <UnstyledLink href="/">
+                <Image
+                  src="/SOSTA color gray.png"
+                  alt="Save Our Salmon"
+                  width={100}
+                  height={75}
+                  className={styles.logo}
+                />
+              </UnstyledLink>
+              {/* <div>SAVE OUR SALMON</div> */}
+              <div className={styles.links}>
+                <Link href="/about">About</Link>
+                <Link href="/murals">Murals</Link>
+                <Link href="/events">Events</Link>
+                <Link href="/resources">Resources</Link>
+                <Link href="/shop">Shop</Link>
+              </div>
             </div>
-          </div>
-
-          {/* This is the section I had worked on before but it may have been wrong? */}
-
-          {/* I tried using imported logos, but I can just do 4 images if we want it exactly like
-        the design */}
-          {/* <div className={styles.socials}>
-          <Link href="https://www.youtube.com/@AustinsAwesomeArt"><FaYoutube /></Link>
-          <Link href="https://www.instagram.com/salmonmural/"><FaInstagram /></Link>
-          <Link href="https://www.linkedin.com/company/salmonmurals/about/"><FaLinkedin /></Link>
-          <Link href="https://www.facebook.com/austins.awesome.art/"><FaFacebookF /></Link>
-      </div> */}
-        </nav>
-        {children}
-        <div className={styles.footer}>
-          <div className={styles.wave1}></div>
-          <div className={styles.wave2}></div>
-          <div className={styles.wave3}></div>
-          <div className={styles.wave4}>
-            <Image
-              className={styles.footerLogo}
-              src="/SOSTA color white.png"
-              alt="Logo"
-              width="125"
-              height="125"
-            />
-            <div className={styles.footerContent}>
-              <div className={styles.subscribe}>
-                Subscribe to our newsletter!
-              </div>
-              <div className={styles.inputWrapper}>
-                <input />
-                <button>Enter</button>
-              </div>
-              <div className={styles.socials}>
-                <UnstyledLink href="https://instagram.com" target="_blank">
-                  <div className={styles.social}>
-                    <FaInstagram />
-                  </div>
-                </UnstyledLink>
-                <UnstyledLink href="https://facebook.com" target="_blank">
-                  <div className={styles.social}>
-                    <FaFacebookF />
-                  </div>
-                </UnstyledLink>
-                <UnstyledLink href="https://youtube.com" target="_blank">
-                  <div className={styles.social}>
-                    <FaYoutube />
-                  </div>
-                </UnstyledLink>
-                <UnstyledLink href="https://linkedin.com" target="_blank">
-                  <div className={styles.social}>
-                    <FaLinkedin />
-                  </div>
-                </UnstyledLink>
+          </nav>
+          <div>{children}</div>
+          <div className={styles.footer}>
+            <div className={styles.wave1}></div>
+            <div className={styles.wave2}></div>
+            <div className={styles.wave3}></div>
+            <div className={styles.wave4}>
+              <Image
+                className={styles.footerLogo}
+                src="/SOSTA color white.png"
+                alt="Logo"
+                width="125"
+                height="125"
+              />
+              <div className={styles.footerContent}>
+                <div className={styles.subscribe}>
+                  Subscribe to our newsletter!
+                </div>
+                <div className={styles.inputWrapper}>
+                  <input />
+                  <button>Enter</button>
+                </div>
+                <div className={styles.socials}>
+                  <UnstyledLink href="https://instagram.com" target="_blank">
+                    <div className={styles.social}>
+                      <FaInstagram />
+                    </div>
+                  </UnstyledLink>
+                  <UnstyledLink href="https://facebook.com" target="_blank">
+                    <div className={styles.social}>
+                      <FaFacebookF />
+                    </div>
+                  </UnstyledLink>
+                  <UnstyledLink href="https://youtube.com" target="_blank">
+                    <div className={styles.social}>
+                      <FaYoutube />
+                    </div>
+                  </UnstyledLink>
+                  <UnstyledLink href="https://linkedin.com" target="_blank">
+                    <div className={styles.social}>
+                      <FaLinkedin />
+                    </div>
+                  </UnstyledLink>
+                </div>
               </div>
             </div>
           </div>
