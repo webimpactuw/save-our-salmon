@@ -1,52 +1,30 @@
-'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './page.module.scss';
-import { UnstyledLink } from '../components/UnstyledLink';
+import { sanityFetch, urlFor } from '../sanity/client';
+import { Mural } from './components/Mural';
+import { redirect } from 'next/navigation';
 
-interface MuralProps {
-  href: string;
-  name: string;
-  thumbnailSrc: string;
-}
+const query = `*[_type=="mural"][0...100] {
+  _id, title, slug, cover
+}`;
 
-const Mural = ({ href, name, thumbnailSrc }: MuralProps) => {
-  const [hovered, setHovered] = useState<boolean>(false);
+const MainPage = async () => {
+  const murals: any[] = await sanityFetch({ query });
+  console.log(murals);
 
-  return (
-    <UnstyledLink href={href}>
-      <div
-        className={styles.mural}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-      >
-        <div className={styles.overlay} style={{ opacity: hovered ? 1 : 0 }}>
-          {name}
-        </div>
-        <img src={thumbnailSrc} />
-      </div>
-    </UnstyledLink>
-  );
-};
-
-const MainPage = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.murals}>
-        <Mural
-          href="/murals/Juanita-Creek"
-          name="Juanita Creek"
-          thumbnailSrc="/Juanita Header.jpg"
-        />
-        <Mural
-          href="/murals/McAleer-Creek"
-          name="McAleer Creek"
-          thumbnailSrc="/McAleer Header.jpg"
-        />
-        <Mural
-          href="/murals/USGS-Western"
-          name="USGS Western"
-          thumbnailSrc="/USGS Header.jpg"
-        />
+        {murals.map(sanity => {
+          return (
+            <Mural
+              key={sanity._id}
+              href={'/murals/' + sanity.slug.current}
+              name={sanity.title}
+              thumbnailSrc={urlFor(sanity.cover) || ''}
+            />
+          );
+        })}
       </div>
       <div className={styles.mapWrapper}>
         <div className={styles.title}>Visit Our Murals!</div>

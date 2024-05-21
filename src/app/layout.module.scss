@@ -991,8 +991,13 @@
   }
 
   .subscribe {
+    background-color: var(--red);
+    border: none;
+    padding: 1.5rem 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
     color: white;
-    font-size: 2rem;
   }
 
   .inputWrapper {

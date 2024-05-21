@@ -45,7 +45,12 @@ export default function RootLayout({
                 <Link href="/murals">Murals</Link>
                 <Link href="/events">Events</Link>
                 {/* <Link href="/resources">Resources</Link> */}
-                <Link href="/shop">Shop</Link>
+                <Link
+                  href="https://www.etsy.com/shop/AustinsAwesomeArtCo?ref=profile_header&section_id=37948403"
+                  target="_blank"
+                >
+                  Shop
+                </Link>
               </div>
             </div>
           </nav>
@@ -63,30 +68,43 @@ export default function RootLayout({
                 height="125"
               />
               <div className={styles.footerContent}>
-                <div className={styles.subscribe}>
-                  Subscribe to our newsletter!
-                </div>
-                <div className={styles.inputWrapper}>
-                  <input />
-                  <button>Enter</button>
-                </div>
+                <UnstyledLink
+                  target="_blank"
+                  href="https://3efc33b6.sibforms.com/serve/MUIEAFEKNKmHyWicrOB4cWLscInZ77HQQLg2YaSnSo7-jjmoMjtBAYqdSfolhh3gk5KRKY84pqz0CV_1YRw66Wiu5LLYz6twliCAnKEsOnumg1h9KzMiVtzjkEYDAXdr1qmZtJmJ1azisEz4y5oVlV6yXOhb4SlFV0AKVnIRzZzikDB2z0KQXWK4vJG4K6DAf_87kgvSLexf2BE3"
+                >
+                  <button className={styles.subscribe}>
+                    Subscribe to Our Newsletter!
+                  </button>
+                </UnstyledLink>
                 <div className={styles.socials}>
-                  <UnstyledLink href="https://instagram.com" target="_blank">
+                  <UnstyledLink
+                    href="https://www.instagram.com/salmonmurals/"
+                    target="_blank"
+                  >
                     <div className={styles.social}>
                       <FaInstagram />
                     </div>
                   </UnstyledLink>
-                  <UnstyledLink href="https://facebook.com" target="_blank">
+                  <UnstyledLink
+                    href="https://www.facebook.com/austins.awesome.art/"
+                    target="_blank"
+                  >
                     <div className={styles.social}>
                       <FaFacebookF />
                     </div>
                   </UnstyledLink>
-                  <UnstyledLink href="https://youtube.com" target="_blank">
+                  <UnstyledLink
+                    href="https://youtube.com/@AustinsAwesomeArt"
+                    target="_blank"
+                  >
                     <div className={styles.social}>
                       <FaYoutube />
                     </div>
                   </UnstyledLink>
-                  <UnstyledLink href="https://linkedin.com" target="_blank">
+                  <UnstyledLink
+                    href="https://www.linkedin.com/in/austinpicinich/"
+                    target="_blank"
+                  >
                     <div className={styles.social}>
                       <FaLinkedin />
                     </div>

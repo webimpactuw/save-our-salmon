@@ -1,0 +1,239 @@
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.splash {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  .shade {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+
+  .name {
+    position: absolute;
+    bottom: 10rem;
+    left: 5rem;
+    opacity: 0.75;
+    color: white;
+    font-size: 15rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 90%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.waveTop1 {
+  width: 100%;
+  height: 20rem;
+  margin-top: -15rem;
+  background-color: var(--light-blue);
+  clip-path: polygon(
+    100% 100%,
+    0% 100%,
+    0% 26.67%,
+    2% 26.78%,
+    4% 27.13%,
+    6% 27.7%,
+    8% 28.47%,
+    10% 29.41%,
+    12% 30.49%,
+    14% 31.68%,
+    16% 32.91%,
+    18% 34.17%,
+    20% 35.39%,
+    22% 36.55%,
+    24% 37.58%,
+    26% 38.47%,
+    28% 39.18%,
+    30% 39.67%,
+    32% 39.95%,
+    34% 39.99%,
+    36% 39.79%,
+    38% 39.37%,
+    40% 38.73%,
+    42% 37.9%,
+    44% 36.91%,
+    46% 35.79%,
+    48% 34.58%,
+    50% 33.33%,
+    52% 32.08%,
+    54% 30.88%,
+    56% 29.76%,
+    58% 28.77%,
+    60% 27.94%,
+    62% 27.3%,
+    64% 26.88%,
+    66% 26.68%,
+    68% 26.72%,
+    70% 26.99%,
+    72% 27.49%,
+    74% 28.2%,
+    76% 29.08%,
+    78% 30.12%,
+    80% 31.27%,
+    82% 32.5%,
+    84% 33.75%,
+    86% 34.99%,
+    88% 36.17%,
+    90% 37.25%,
+    92% 38.19%,
+    94% 38.96%,
+    96% 39.53%,
+    98% 39.88%,
+    100% 40%
+  );
+}
+
+.title {
+  margin-bottom: 3.5rem;
+  color: var(--dark-blue);
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.sponsors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+  background-color: var(--light-blue);
+
+  .title {
+    color: var(--dark-blue);
+    margin-bottom: 7.5rem;
+  }
+
+  .marquee {
+    width: 100vw;
+    transform: rotate(-3.5deg);
+  }
+
+  .sponsor {
+    width: 10rem;
+    height: 10rem;
+    margin-right: 5rem;
+    object-fit: contain;
+  }
+}
+
+.waveBottom1 {
+  width: 100%;
+  height: 20rem;
+  background-color: var(--light-blue);
+  clip-path: polygon(
+    100% 0%,
+    0% 0%,
+    0% 74.67%,
+    2% 74.39%,
+    4% 73.55%,
+    6% 72.19%,
+    8% 70.31%,
+    10% 67.98%,
+    12% 65.24%,
+    14% 62.15%,
+    16% 58.79%,
+    18% 55.23%,
+    20% 51.55%,
+    22% 47.83%,
+    24% 44.17%,
+    26% 40.63%,
+    28% 37.31%,
+    30% 34.28%,
+    32% 31.6%,
+    34% 29.34%,
+    36% 27.55%,
+    38% 26.27%,
+    40% 25.53%,
+    42% 25.34%,
+    44% 25.71%,
+    46% 26.64%,
+    48% 28.09%,
+    50% 30.04%,
+    52% 32.45%,
+    54% 35.25%,
+    56% 38.39%,
+    58% 41.79%,
+    60% 45.38%,
+    62% 49.07%,
+    64% 52.78%,
+    66% 56.43%,
+    68% 59.94%,
+    70% 63.22%,
+    72% 66.2%,
+    74% 68.81%,
+    76% 70.99%,
+    78% 72.7%,
+    80% 73.89%,
+    82% 74.54%,
+    84% 74.64%,
+    86% 74.17%,
+    88% 73.16%,
+    90% 71.62%,
+    92% 69.59%,
+    94% 67.11%,
+    96% 64.25%,
+    98% 61.06%,
+    100% 57.62%
+  );
+}
+
+.before {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10rem;
+  margin-bottom: 5rem;
+
+  img {
+    width: 100%;
+    height: 60rem;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 2px;
+  }
+}
+
+.after {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10rem;
+  margin-bottom: 10rem;
+
+  img {
+    width: 100%;
+    height: 60rem;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 2px;
+  }
+}
+
+.mapWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10rem;
+
+  .map {
+    width: min(100%, 100rem);
+    height: 50rem;
+    border: none;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+}
