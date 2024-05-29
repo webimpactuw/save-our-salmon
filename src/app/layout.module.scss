@@ -12,10 +12,9 @@
   height: 20rem;
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
   padding: 1.5rem 5rem;
   z-index: 99;
-  background: white;
+  background: #16a1fd;
   clip-path: polygon(
     100% 0%,
     0% 0%,
@@ -75,9 +74,8 @@
 
 .navLayout {
   width: 100%;
-  display: flex;
-  justify-content: between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
 }
 
 .logo {
@@ -87,30 +85,70 @@
   object-fit: contain;
 }
 
-// Currently just has placeholder dropdown arrows
 .links {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-right: 2.5rem;
-  padding-bottom: 2rem;
   gap: 5rem;
+  margin-bottom: 2rem;
 
-  a {
-    color: #0d70a9;
+  .link {
+    color: white;
     font-size: 1.8rem;
     font-weight: 600;
     position: relative;
     text-decoration: none;
     text-underline-offset: 2px;
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 4px;
 
     &:hover {
       text-decoration: underline;
       text-decoration-style: wavy;
-      text-decoration-color: var(--red);
+      color: var(--dark-blue);
+      text-decoration-color: var(--dark-blue);
     }
+
+    &.selected {
+      color: var(--red);
+      &:hover {
+        text-decoration-color: var(--red);
+      }
+    }
+  }
+}
+
+.donateShop {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
+
+  .donate {
+    width: 12.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    background-color: var(--dark-blue);
+  }
+
+  .shop {
+    width: 7.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2.5px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    background: none;
   }
 }
 
@@ -982,6 +1020,16 @@
     object-fit: contain;
   }
 
+  .contact {
+    position: absolute;
+    bottom: 7.5rem;
+    right: 5rem;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
   .footerContent {
     display: flex;
     flex-direction: column;
@@ -995,6 +1043,7 @@
     border: none;
     padding: 1.5rem 1.5rem;
     margin-bottom: 0.5rem;
+    border-radius: 7.5px;
     font-size: 1.8rem;
     font-weight: 500;
     color: white;
