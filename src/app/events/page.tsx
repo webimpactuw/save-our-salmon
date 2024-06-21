@@ -1,13 +1,20 @@
 import { UnstyledLink } from '../components/UnstyledLink';
+import { sanityFetch, urlFor } from '../sanity/client';
 import styles from './page.module.scss';
 
-export default function Events() {
+const query = `*[_type=="involvement"][0] {
+  SplashImage
+}`;
+
+const Events = async () => {
+  const data: any = await sanityFetch({ query });
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.splash}>
         <div className={styles.shade} />
-        <div className={styles.name}>EVENTS</div>
-        <img src="/Events Header.jpg" />
+        <div className={styles.name}>Get Involved</div>
+        <img src={urlFor(data.SplashImage) || ''} />
       </div>
       <div className={styles.waveTop1} />
       <div className={styles.title}>Events</div>
@@ -34,4 +41,6 @@ export default function Events() {
       </UnstyledLink>
     </div>
   );
-}
+};
+
+export default Events;

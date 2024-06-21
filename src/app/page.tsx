@@ -65,7 +65,13 @@ const Home = async () => {
       <div className={styles.mission}>
         <div className={styles.title}>
           Our{' '}
-          <span style={{ color: 'var(--deep-blue)', fontSize: 'inherit' }}>
+          <span
+            style={{
+              color: 'var(--deep-blue)',
+              fontSize: 'inherit',
+              fontWeight: 'inherit',
+            }}
+          >
             Mission
           </span>
         </div>

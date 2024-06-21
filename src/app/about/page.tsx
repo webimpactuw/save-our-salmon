@@ -1,8 +1,14 @@
-import Image from 'next/image';
 import styles from './page.module.scss';
 import { UnstyledLink } from '../components/UnstyledLink';
+import { sanityFetch } from '../sanity/client';
 
-export default function AboutHome() {
+const query = `*[type=="about"][0] {
+  SplashImage
+}`;
+
+const About = async () => {
+  const data = await sanityFetch(query);
+
   return (
     <div>
       <div className={styles.splash}>
@@ -83,4 +89,6 @@ export default function AboutHome() {
       </div>
     </div>
   );
-}
+};
+
+export default About;

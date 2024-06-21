@@ -49,7 +49,7 @@ const MuralShowcase = async ({
       <div className={styles.waveBottom1} />
       {data.images.images.map((img: any, i: number) => (
         <div key={i} className={styles.before}>
-          <img key={i} src={urlFor(img) || ''} />
+          <img src={urlFor(img) || ''} />
         </div>
       ))}
       <div className={styles.mapWrapper}>
