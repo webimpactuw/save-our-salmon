@@ -139,7 +139,7 @@ export default function RootLayout({
                     </div>
                   </UnstyledLink>
                   <UnstyledLink
-                    href="https://youtube.com/@AustinsAwesomeArt"
+                    href="https://youtube.com/@SalmonMurals"
                     target="_blank"
                   >
                     <div className={styles.social}>
