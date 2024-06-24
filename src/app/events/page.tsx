@@ -7,38 +7,49 @@ const query = `*[_type=="involvement"][0] {
 }`;
 
 const Events = async () => {
-  const data: any = await sanityFetch({ query });
+  const data: any = (await sanityFetch({ query })) || {};
+  const { SplashImage } = data;
 
   return (
-    <div className={styles.wrapper}>
+    <div style={{ marginBottom: '10rem' }}>
       <div className={styles.splash}>
         <div className={styles.shade} />
         <div className={styles.name}>Get Involved</div>
-        <img src={urlFor(data.SplashImage) || ''} />
+        {SplashImage && <img src={urlFor(SplashImage) || ''} />}
       </div>
       <div className={styles.waveTop1} />
-      <div className={styles.title}>Events</div>
-      <div className={styles.subtitle}>Community Paint Days</div>
-      <p className={styles.description}>
-        We host Community Paint Days to “paint by number” SOS Murals - meaning
-        ANYONE can help paint! We partner with Seattle-based nonprofit Urban
-        ArtWorks to host Community Paint Days.
-      </p>
-      <p className={styles.description}>
-        Our first Paint Day for the Kirkland SOS Mural was held in April 2022
-        with 160+ volunteers to paint. All volunteer painting spots filled
-        within 1 hour of opening signups - we were blown away by the
-        overwhelming support! Our Lake Forest Park Paint Day had 200+ volunteer
-        painters in September 2022. And most recently, our Magnuson Park Seattle
-        Paint Day had 350+ painters!!
-      </p>
-      <div className={styles.subtitle}>Interested?</div>
-      <UnstyledLink href="https://www.austinsart.net/events" target="_blank">
-        <div className={styles.salmonButton}>
-          <img src="/Salmon B.png" />
-          <div className={styles.text}>Updates Here!</div>
-        </div>
-      </UnstyledLink>
+      <div className={styles.title}>Join the SOS Movement!</div>
+      <div
+        style={{
+          color: 'var(--deep-blue)',
+          fontSize: '2rem',
+          textAlign: 'center',
+        }}
+      >
+        Here&apos;s How You Can Get Involved :)
+      </div>
+      <div className={styles.step}>1. As a Volunteer: Attend an Event</div>
+      <div className={styles.step}>
+        2. As a Steward: Sign Up to be a Salmon Watcher!
+      </div>
+      <div className={styles.step}>
+        3. As an Educator: Teach SOS in Your Classroom!
+      </div>
+      <div className={styles.step}>
+        4. As a Wall Owner: Commission a Mural on Your Wall!
+      </div>
+      <div className={styles.step}>
+        5. As an Artist: Paint Your Own SOS Mural!
+      </div>
+      <div className={styles.step}>
+        6. As an Employee: Help Us Facilitate Behind-the-Scenes
+      </div>
+      <div className={styles.join}>
+        Want to join our team?{' '}
+        <UnstyledLink href="/contact" style={{ color: 'var(--red)' }}>
+          Contact us!
+        </UnstyledLink>
+      </div>
     </div>
   );
 };

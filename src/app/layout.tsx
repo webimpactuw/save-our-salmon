@@ -90,10 +90,7 @@ export default function RootLayout({
               </div>
               <div className={styles.donateShop}>
                 <button className={styles.donate}>Donate</button>
-                <UnstyledLink
-                  href="https://www.etsy.com/shop/AustinsAwesomeArtCo?ref=profile_header&section_id=37948403"
-                  target="_blank"
-                >
+                <UnstyledLink href="/shop">
                   <button className={styles.shop}>Shop</button>
                 </UnstyledLink>
               </div>
