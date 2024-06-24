@@ -1,4 +1,5 @@
 .splash {
+  position: relative;
   width: 100%;
   height: 100vh;
 
@@ -6,13 +7,13 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.35);
   }
 
   .name {
     position: absolute;
     left: 2.5rem;
-    bottom: 5rem;
+    bottom: 10rem;
     color: rgba(255, 255, 255, 0.75);
     font-size: 10rem;
     font-weight: 900;
@@ -28,7 +29,7 @@
 .waveTop1 {
   width: 100%;
   height: 20rem;
-  margin-top: -10rem;
+  margin-top: -15rem;
   background-color: white;
   clip-path: polygon(
     100% 100%,
@@ -87,251 +88,136 @@
   );
 }
 
-.sectionWrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 5rem;
-
-  .title {
-    margin-bottom: 5rem;
-    font-size: 8rem;
-    font-weight: 700;
-  }
-
-  .subtitle {
-    margin-bottom: 2.5rem;
-    color: var(--dark-blue);
-    font-size: 3.5rem;
-    font-weight: 500;
-  }
-
-  .description {
-    width: 65ch;
-    margin-bottom: 5rem;
-    font-size: 2rem;
-    text-align: center;
-    line-height: 135%;
-  }
-}
-
-.salmonButton {
-  position: relative;
-  width: 30rem;
-  height: 15rem;
+.austinHeader {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2.5rem 0;
-  color: white;
+  gap: 2.5rem;
+  padding: 0 10rem;
+  margin-bottom: 5rem;
 
-  img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  span {
+    color: var(--light-deep-blue);
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-align: center;
   }
 
-  .text {
-    transform: rotate(-5deg);
-    z-index: 1;
-    font-size: 2rem;
-    font-weight: 600;
+  img {
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
+    border-radius: 99rem;
   }
 }
 
-.wave1 {
-  width: 100%;
+.austinDescription {
+  padding: 0 10rem;
+  margin-bottom: 5rem;
+  font-size: 1.8rem;
+  white-space: pre-line;
+}
 
-  .top {
-    width: 100%;
-    height: 20rem;
-    background-color: var(--light-blue);
-    clip-path: polygon(
-      100% 100%,
-      0% 100%,
-      0% 58%,
-      2% 57.72%,
-      4% 56.89%,
-      6% 55.52%,
-      8% 53.65%,
-      10% 51.31%,
-      12% 48.57%,
-      14% 45.49%,
-      16% 42.12%,
-      18% 38.56%,
-      20% 34.88%,
-      22% 31.17%,
-      24% 27.5%,
-      26% 23.97%,
-      28% 20.64%,
-      30% 17.61%,
-      32% 14.93%,
-      34% 12.67%,
-      36% 10.88%,
-      38% 9.6%,
-      40% 8.86%,
-      42% 8.67%,
-      44% 9.05%,
-      46% 9.97%,
-      48% 11.43%,
-      50% 13.38%,
-      52% 15.78%,
-      54% 18.59%,
-      56% 21.72%,
-      58% 25.12%,
-      60% 28.71%,
-      62% 32.4%,
-      64% 36.12%,
-      66% 39.77%,
-      68% 43.27%,
-      70% 46.55%,
-      72% 49.53%,
-      74% 52.14%,
-      76% 54.32%,
-      78% 56.03%,
-      80% 57.23%,
-      82% 57.88%,
-      84% 57.97%,
-      86% 57.5%,
-      88% 56.49%,
-      90% 54.95%,
-      92% 52.92%,
-      94% 50.44%,
-      96% 47.58%,
-      98% 44.39%,
-      100% 40.96%
-    );
+.title {
+  margin-bottom: 3.5rem;
+  color: var(--dark-blue);
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-align: center;
+
+  span {
+    color: var(--dark-blue);
+    font-size: 3.5rem;
+    font-weight: 600;
+
+    span {
+      all: inherit;
+      color: var(--light-deep-blue);
+    }
   }
+}
 
-  .content {
-    width: 100%;
-    min-height: 45rem;
+.subtitle {
+  margin-top: -2.5rem;
+  margin-bottom: 3.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.partners {
+  display: flex;
+  gap: 5rem;
+  padding: 5rem 10rem;
+  color: white;
+
+  .partner {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--light-blue);
+    gap: 2.5rem;
 
-    .title {
-      margin-bottom: 5rem;
-      color: var(--dark-blue);
-      font-size: 7.5rem;
-      font-weight: 700;
+    img {
+      width: 100%;
+      height: 20rem;
+      object-fit: contain;
+    }
+
+    .name {
+      font-size: 2.5rem;
+      font-weight: 500;
     }
 
     .description {
-      width: 65ch;
-      margin-bottom: 3.5rem;
-      font-size: 2rem;
+      font-size: 1.8rem;
       text-align: center;
+      line-height: 150%;
     }
-  }
-
-  .bottom {
-    width: 100%;
-    height: 20rem;
-    background-color: var(--light-blue);
-    clip-path: polygon(
-      100% 0%,
-      0% 0%,
-      0% 74.67%,
-      2% 74.39%,
-      4% 73.55%,
-      6% 72.19%,
-      8% 70.31%,
-      10% 67.98%,
-      12% 65.24%,
-      14% 62.15%,
-      16% 58.79%,
-      18% 55.23%,
-      20% 51.55%,
-      22% 47.83%,
-      24% 44.17%,
-      26% 40.63%,
-      28% 37.31%,
-      30% 34.28%,
-      32% 31.6%,
-      34% 29.34%,
-      36% 27.55%,
-      38% 26.27%,
-      40% 25.53%,
-      42% 25.34%,
-      44% 25.71%,
-      46% 26.64%,
-      48% 28.09%,
-      50% 30.04%,
-      52% 32.45%,
-      54% 35.25%,
-      56% 38.39%,
-      58% 41.79%,
-      60% 45.38%,
-      62% 49.07%,
-      64% 52.78%,
-      66% 56.43%,
-      68% 59.94%,
-      70% 63.22%,
-      72% 66.2%,
-      74% 68.81%,
-      76% 70.99%,
-      78% 72.7%,
-      80% 73.89%,
-      82% 74.54%,
-      84% 74.64%,
-      86% 74.17%,
-      88% 73.16%,
-      90% 71.62%,
-      92% 69.59%,
-      94% 67.11%,
-      96% 64.25%,
-      98% 61.06%,
-      100% 57.62%
-    );
   }
 }
 
-.teamLayout {
+.grid {
+  width: 100%;
+  padding: 0 10rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5rem;
+  margin-bottom: 5rem;
+
+  img {
+    width: 100%;
+    max-height: 20rem;
+    object-fit: contain;
+  }
+}
+
+.join {
+  margin-bottom: 5rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.teamMember {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 1.5rem;
+  flex-direction: column;
+  align-items: center;
 
-  .member {
-    width: 30rem;
-    min-height: 45rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding: 2.5rem;
+  .pfp {
+    overflow: hidden;
+    width: 20rem;
+    height: 20rem;
+    margin-bottom: 1.5rem;
+    border-radius: 99rem;
+  }
 
-    .pfp {
-      width: 25rem;
-      height: 25rem;
-      border-radius: 99rem;
-      overflow: hidden;
-      background-color: var(--light-blue);
-    }
+  .name {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
 
-    .info {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-
-      .name {
-        font-size: 3.5rem;
-        font-weight: 600;
-      }
-
-      .role {
-        color: var(--red);
-        font-size: 2rem;
-        font-weight: 500;
-      }
-    }
+  .role {
+    font-size: 1.8rem;
   }
 }

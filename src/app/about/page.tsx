@@ -1,91 +1,106 @@
 import styles from './page.module.scss';
 import { UnstyledLink } from '../components/UnstyledLink';
-import { sanityFetch } from '../sanity/client';
+import { sanityFetch, urlFor } from '../sanity/client';
+import { WaveContainer } from '../components/WaveContainer';
 
-const query = `*[type=="about"][0] {
-  SplashImage
+const query = `*[_type=="about"][0] {
+  SplashImage, AustinPfp, AboutAustin, UrbanArtworksDescription, SalmonWatchersDescription, Team, Collaborators, Supporters, Spawnsors,
 }`;
 
 const About = async () => {
-  const data = await sanityFetch(query);
+  const data: any = (await sanityFetch({ query })) || {};
+  const {
+    SplashImage,
+    AustinPfp,
+    AboutAustin,
+    UrbanArtworksDescription,
+    SalmonWatchersDescription,
+    Team,
+    Collaborators,
+    Supporters,
+    Spawnsors,
+  } = data;
+
+  console.log(Collaborators);
 
   return (
-    <div>
+    <div style={{ marginBottom: '10rem' }}>
       <div className={styles.splash}>
         <div className={styles.shade} />
-        <div className={styles.name}>ABOUT</div>
-        <img src="/SOS Austin.jpg" />
+        <div className={styles.name}>About Us</div>
+        {SplashImage && <img src={urlFor(SplashImage) || ''} />}
       </div>
       <div className={styles.waveTop1} />
-      <div className={styles.sectionWrapper}>
-        <div className={styles.title}>Our Story</div>
-        <div className={styles.subtitle}>Why murals? Why salmon?</div>
-        <p className={styles.description}>
-          When I was in 11th grade, I learned Juanita Creek – the
-          salmon-spawning stream less than one minute from my backyard in
-          Kirkland, WA – had only 3 salmon return to spawn in 2021. Every day
-          I’d pass Juanita Creek on my drive to school - yet prior to 11th
-          grade, I never paid much attention to the hidden stream. Many of Lake
-          Washington’s urban creeks are completely hidden under culverts,
-          flowing below paved roads. These once “hidden” streams are now focal
-          points, with so far 720+ volunteers helping paint 430+ feet of SOS
-          Murals painted along 3+ streams and counting!
-        </p>
-        <div className={styles.subtitle}>The Vision</div>
-        <p className={styles.description}>
-          Despite being right below our eyes, Juanita Creek had become “out of
-          sight, and out of mind”. On my daily commute to Juanita High School, I
-          would pass a 112-foot blank boring wall across from Juanita Creek. As
-          an artist, I realized I could combine these two problems – hidden
-          streams, and blank dull walls. My simple idea grew into a big idea:
-          using my love of art to educate, excite, and engage my community in
-          restoring Juanita Creek. My first “Save Our Salmon (SOS) Mural” was
-          born.
-        </p>
+      <div className={styles.austinHeader}>
+        <span>
+          Founder & Lead Artist:{' '}
+          <span style={{ all: 'inherit', color: 'var(--dark-blue)' }}>
+            Austin Picinich
+          </span>
+        </span>
+        <img src={urlFor(AustinPfp) || ''} />
       </div>
-      <div className={styles.wave1}>
-        <div className={styles.top} />
-        <div className={styles.content}>
-          <div className={styles.title}>The Cause</div>
-          <p className={styles.description}>
-            I’m partnering with the University of Washington’s North Lake
-            Washington SalmonWatchers program to bring this SOS initiative to
-            life. SalmonWatchers is working to research, restore, and raise
-            awareness for stream health and salmon populations.
-          </p>
-          <p className={styles.description}>
-            The SalmonWatchers program - founded and led by UW Bothell biology
-            professor Dr. Jeff Jensen - works with students and community
-            volunteers to research and restore local streams. Projects include
-            building egg incubators and natural resources for salmon to thrive.
-          </p>
-          <UnstyledLink
-            href="https://www.bothellwa.gov/1413/Salmon-Watcher-Program"
-            target="_blank"
-          >
-            <div className={styles.salmonButton}>
-              <img src="/Salmon B.png" />
-              <div className={styles.text}>Salmon Watchers</div>
-            </div>
-          </UnstyledLink>
-        </div>
-        <div className={styles.bottom} />
+      <p className={styles.austinDescription}>{AboutAustin}</p>
+      <div className={styles.title}>
+        <span>
+          Teamwork Makes the <span>Stream</span> Work
+        </span>
       </div>
-      <div className={styles.sectionWrapper}>
-        <div className={styles.title}>Meet Our Team</div>
-        <div className={styles.teamLayout}>
-          <div className={styles.member}>
-            <img
-              className={styles.pfp}
-              src="/austin.png"
-              alt="Austin Picinich"
-            />
-            <div className={styles.info}>
-              <div className={styles.name}>Austin Picinich</div>
-              <div className={styles.role}>Founder</div>
-            </div>
+      <div className={styles.title}>Our Key Partners</div>
+      <WaveContainer>
+        <div className={styles.partners}>
+          <div className={styles.partner}>
+            <img src="/ua.png" />
+            <span className={styles.name}>Urban Artworks</span>
+            <p className={styles.description}>{UrbanArtworksDescription}</p>
+          </div>
+          <div className={styles.partner}>
+            <img src="/uwb.png" />
+            <span className={styles.name}>Salmon Watchers</span>
+            <p className={styles.description}>{SalmonWatchersDescription}</p>
           </div>
         </div>
+      </WaveContainer>
+      <div className={styles.title}>Our Team</div>
+      <div className={styles.grid}>
+        {Team?.map(({ Pfp, Name, Role }: any, i: number) => (
+          <div key={i} className={styles.teamMember}>
+            <img className={styles.pfp} src={urlFor(Pfp) || ''} />
+            <div className={styles.name}>{Name}</div>
+            <div className={styles.role}>{Role}</div>
+          </div>
+        ))}
+      </div>
+      <div className={styles.join}>
+        Want to join our team?{' '}
+        <UnstyledLink href="/contact" style={{ color: 'var(--red)' }}>
+          Contact Us!
+        </UnstyledLink>
+      </div>
+      <div className={styles.title}>Our Collaborators</div>
+      <div className={styles.subtitle}>
+        We&apos;ve collaborated with these groups on individual projects
+      </div>
+      <div className={styles.grid}>
+        {Collaborators?.map((image: any, i: number) => (
+          <img key={i} src={urlFor(image) || ''} />
+        ))}
+      </div>
+      <div className={styles.title}>Our Supporters</div>
+      <div className={styles.subtitle}>
+        These groups swim along for the ride as part of our journey
+      </div>
+      <div className={styles.grid}>
+        {Supporters?.map((image: any, i: number) => (
+          <img key={i} src={urlFor(image) || ''} />
+        ))}
+      </div>
+      <div className={styles.title}>Our Spawnsors</div>
+      <div className={styles.subtitle}>These groups help fund our work</div>
+      <div className={styles.grid}>
+        {Spawnsors?.map((image: any, i: number) => (
+          <img key={i} src={urlFor(image) || ''} />
+        ))}
       </div>
     </div>
   );
