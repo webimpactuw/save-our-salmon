@@ -44,8 +44,13 @@ const Events = async () => {
       </div>
       <div className={styles.step}>1. As a Volunteer: Attend an Event</div>
       <div className={styles.upcomingEvents}>
-        {upcomingEvents.map(({ title, when, Address }: any) => (
-          <UpcomingMural name={title} when={new Date(when)} where={Address} />
+        {upcomingEvents.map(({ title, when, Address }: any, i: number) => (
+          <UpcomingMural
+            key={i}
+            name={title}
+            when={new Date(when)}
+            where={Address}
+          />
         ))}
       </div>
       <div className={styles.step}>
