@@ -34,9 +34,9 @@ const Why = async () => {
         <span className={styles.impact}>
           Can art really save salmon?{' '}
           <span style={{ all: 'inherit', color: 'var(--light-deep-blue)' }}>
-            YES
-          </span>
-          , here&apos;s why...
+            YES,
+          </span>{' '}
+          here&apos;s why...
         </span>
       </div>
       <div className={styles.statsWrapper}>

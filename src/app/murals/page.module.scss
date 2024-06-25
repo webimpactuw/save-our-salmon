@@ -6,10 +6,19 @@
 
 .murals {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
   padding: 2.5rem 5rem;
+}
+
+.title {
+  margin-top: 10rem;
+  margin-bottom: 3.5rem;
+  color: var(--red);
+  font-size: 6.5rem;
+  font-weight: 800;
+  text-align: center;
 }
 
 .mapWrapper {
@@ -17,22 +26,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 7.5rem;
   padding: 0 5rem;
 
-  .title {
-    margin-bottom: 3.5rem;
-    color: var(--red);
-    font-size: 6.5rem;
-    font-weight: 800;
-  }
-
   .map {
-    width: 100%;
+    width: 90%;
     height: 60rem;
+    margin: 5rem 0;
     border: none;
     border-radius: 2px;
     overflow: hidden;
+    pointer-events: none;
   }
 }
 

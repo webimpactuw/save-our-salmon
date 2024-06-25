@@ -15,7 +15,7 @@ export const Mural = ({ href, name, thumbnailSrc }: MuralProps) => {
   return (
     <UnstyledLink href={href}>
       <div
-        className={styles.mural}
+        className={styles.finishedMural}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
@@ -25,5 +25,31 @@ export const Mural = ({ href, name, thumbnailSrc }: MuralProps) => {
         <img src={thumbnailSrc} />
       </div>
     </UnstyledLink>
+  );
+};
+
+interface UpcomingMuralProps {
+  name: string;
+  when: Date;
+  where: string;
+}
+
+export const UpcomingMural = ({ name, when, where }: UpcomingMuralProps) => {
+  return (
+    <div className={styles.upcomingMural}>
+      <img className={styles.fish} src="/salmon.png" />
+      <div className={styles.text}>
+        <span>Upcoming Event!</span>
+        <br />
+        <span className={styles.details}>
+          {when.toLocaleDateString()} —{' '}
+          {when.toLocaleTimeString(navigator.language, {
+            hour: 'numeric',
+            minute: '2-digit',
+          })}{' '}
+          @ {where}
+        </span>
+      </div>
+    </div>
   );
 };
