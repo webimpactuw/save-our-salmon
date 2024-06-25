@@ -3,6 +3,7 @@ import styles from './page.module.scss';
 import { UnstyledLink } from './components/UnstyledLink';
 import { sanityFetch, urlFor } from './sanity/client';
 import Marquee from 'react-fast-marquee';
+import { WaveContainer } from './components/WaveContainer';
 
 const query = `*[_type=="home"][0] {
   Showcase, Stats, ImpactLinks
@@ -82,28 +83,34 @@ const Home = async () => {
           We&apos;re anchored by 4 founding values:
         </div>
       </div>
-      <div className={styles.waveTop2}></div>
-      <div className={styles.waveTop3}></div>
-      <div className={styles.waveBetween1}>
-        <div className={styles.whatWeDoItem}>
-          <span className={styles.emphasis}>Paint.</span>Brighten communities
-          with Vibrant Art
+      <WaveContainer>
+        <div className={styles.missions}>
+          <div className={styles.mission}>
+            <div className={styles.heading}>Paint</div>
+            <p className={styles.description}>
+              Brighten communities with public art
+            </p>
+          </div>
+          <div className={styles.mission}>
+            <div className={styles.heading}>Engage</div>
+            <p className={styles.description}>
+              Involve community in collaborative art events
+            </p>
+          </div>
+          <div className={styles.mission}>
+            <div className={styles.heading}>Teach</div>
+            <p className={styles.description}>
+              Educate participants to protect local streams
+            </p>
+          </div>
+          <div className={styles.mission}>
+            <div className={styles.heading}>Restore</div>
+            <p className={styles.description}>
+              Create a community of salmon stewards
+            </p>
+          </div>
         </div>
-        <div className={styles.whatWeDoItem}>
-          <span className={styles.emphasis}>Engage.</span>Involve neighbors in
-          Community Paint days
-        </div>
-        <div className={styles.whatWeDoItem}>
-          <span className={styles.emphasis}>Teach.</span>
-          Educate participants to protect local streams
-        </div>
-        <div className={styles.whatWeDoItem}>
-          <span className={styles.emphasis}>Restore.</span>
-          Create a community of salmon stewards
-        </div>
-      </div>
-      <div className={styles.waveBottom2}></div>
-      <div className={styles.waveBottom1}></div>
+      </WaveContainer>
       <div className={styles.statsTitle}>
         Our{' '}
         <span style={{ color: 'var(--deep-blue)', fontSize: 'inherit' }}>

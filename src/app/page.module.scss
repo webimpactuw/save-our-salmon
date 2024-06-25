@@ -156,7 +156,44 @@
   }
 
   .statement {
+    margin-bottom: 5rem;
     font-size: 2rem;
+  }
+}
+
+.missions {
+  height: 30rem;
+  padding: 0 10rem;
+  padding-top: 2.5rem;
+  display: flex;
+  gap: 5rem;
+
+  .mission {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .heading {
+      margin-bottom: 1.5rem;
+      color: var(--red);
+      font-size: 4.5rem;
+      font-weight: 600;
+    }
+
+    .description {
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    &:nth-child(odd) {
+      transform: translateY(-2.5rem);
+    }
+
+    &:nth-child(even) {
+      transform: translateY(2.5rem);
+    }
   }
 }
 
