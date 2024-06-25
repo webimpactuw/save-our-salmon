@@ -58,7 +58,9 @@ const Home = async () => {
               margin: '0 5rem',
               marginTop: i % 2 === 0 ? '3.5rem' : '-3.5rem',
               objectFit: 'cover',
-              border: '5px solid var(--light-deep-blue)',
+              border: `5px solid ${
+                i % 2 === 0 ? 'var(--dark-blue)' : 'var(--light-deep-blue)'
+              }`,
               borderRadius: 10,
             }}
           />

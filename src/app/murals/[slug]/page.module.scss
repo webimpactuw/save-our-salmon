@@ -17,9 +17,8 @@
 
   .name {
     position: absolute;
-    bottom: 10rem;
+    bottom: 15rem;
     left: 5rem;
-    opacity: 0.75;
     color: white;
     font-size: 10rem;
     font-weight: 900;
@@ -100,7 +99,16 @@
   margin-bottom: 3.5rem;
   color: var(--dark-blue);
   font-size: 5rem;
-  font-weight: 700;
+  font-weight: 600;
+}
+
+.subtitle {
+  padding: 0 10rem;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  color: var(--dark-blue);
+  font-size: 3.5rem;
+  font-weight: 600;
 }
 
 .sponsors {
@@ -189,51 +197,47 @@
   );
 }
 
-.before {
+.videoContainer {
   width: 100%;
+  height: 55rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 10rem;
+  justify-content: center;
   margin-bottom: 5rem;
 
-  img {
-    width: 100%;
-    height: 60rem;
-    overflow: hidden;
-    object-fit: cover;
-    border-radius: 2px;
+  iframe {
+    width: 80%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
   }
 }
 
-.after {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 10rem;
-  margin-bottom: 10rem;
-
-  img {
-    width: 100%;
-    height: 60rem;
-    overflow: hidden;
-    object-fit: cover;
-    border-radius: 2px;
-  }
+.description {
+  padding: 5rem 10rem;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  white-space: pre-line;
 }
 
 .mapWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10rem;
+
+  .title {
+    margin-top: 3.5rem;
+    color: white;
+    font-size: 5rem;
+    font-weight: 500;
+  }
 
   .map {
     width: min(100%, 100rem);
     height: 50rem;
+    margin-bottom: 7.5rem;
     border: none;
-    border-radius: 2px;
+    border-radius: 20px;
     overflow: hidden;
   }
 }
