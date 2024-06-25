@@ -34,6 +34,7 @@ const Press = async () => {
       <Marquee className={styles.marquee}>
         {data.AsSeenOn?.images?.map((link: any, i: number) => (
           <img
+            key={i}
             src={urlFor(link) || ''}
             style={{
               width: '15rem',
@@ -49,19 +50,21 @@ const Press = async () => {
       <WaveContainer>
         <Paginator
           elements={
-            Articles?.map(({ Logo, ArticleImage, Link, Caption }: any) => (
-              <UnstyledLink href={Link} target="_blank">
-                <div className={styles.genericArticle}>
-                  <img className={styles.logo} src={urlFor(Logo) || ''} />
-                  <div className={styles.thumbnail}>
-                    <img src={urlFor(ArticleImage) || ''} />
-                    <div className={styles.caption}>
-                      <span>{Caption}</span>
+            Articles?.map(
+              ({ Logo, ArticleImage, Link, Caption }: any, i: number) => (
+                <UnstyledLink key={i} href={Link} target="_blank">
+                  <div className={styles.genericArticle}>
+                    <img className={styles.logo} src={urlFor(Logo) || ''} />
+                    <div className={styles.thumbnail}>
+                      <img src={urlFor(ArticleImage) || ''} />
+                      <div className={styles.caption}>
+                        <span>{Caption}</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </UnstyledLink>
-            )) || []
+                </UnstyledLink>
+              )
+            ) || []
           }
           perPage={3}
           intervalMS={5000}
@@ -71,8 +74,8 @@ const Press = async () => {
       <WaveContainer color="var(--light-blue)">
         <Paginator
           elements={
-            Videos?.map(({ Logo, VideoEmbedUrl }: any) => (
-              <div className={styles.genericArticle}>
+            Videos?.map(({ Logo, VideoEmbedUrl }: any, i: number) => (
+              <div key={i} className={styles.genericArticle}>
                 <img className={styles.logo} src={urlFor(Logo) || ''} />
                 <iframe src={VideoEmbedUrl} />
               </div>
@@ -86,8 +89,8 @@ const Press = async () => {
       <WaveContainer>
         <Paginator
           elements={
-            Podcasts?.map(({ Logo, Link }: any) => (
-              <UnstyledLink href={Link} target="_blank">
+            Podcasts?.map(({ Logo, Link }: any, i: number) => (
+              <UnstyledLink key={i} href={Link} target="_blank">
                 <img className={styles.podcast} src={urlFor(Logo) || ''} />
               </UnstyledLink>
             )) || []

@@ -21,7 +21,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const segment = useSelectedLayoutSegment();
-  console.log(segment);
 
   return (
     <html lang="en">

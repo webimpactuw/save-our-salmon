@@ -21,8 +21,6 @@ const About = async () => {
     Spawnsors,
   } = data;
 
-  console.log(Collaborators);
-
   return (
     <div style={{ marginBottom: '10rem' }}>
       <div className={styles.splash}>

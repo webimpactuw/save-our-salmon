@@ -16,8 +16,6 @@ const How = async () => {
     download,
   } = data;
 
-  console.log(download);
-
   return (
     <div>
       <div className={styles.splash}>
@@ -32,9 +30,9 @@ const How = async () => {
         <iframe src={HowItWorksEmbedUrl} title="How it works YT video" />
       </div>
       <div className={styles.title}>How to Lead Your Own Mural</div>
-      <p className={styles.description}>{HowItWorksDescription}</p>
+      <p className={styles.description}>{HowToLeadDescription}</p>
       <div className={styles.embedWrapper}>
-        <iframe src={HowItWorksEmbedUrl} title="How it works YT video" />
+        <iframe src={HowToLeadEmbedUrl} title="How it works YT video" />
       </div>
       <div className={styles.downloadWrapper}>
         <a

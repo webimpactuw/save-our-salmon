@@ -10,7 +10,6 @@ const query = `*[_type=="home"][0] {
 
 const Home = async () => {
   const data: any = await sanityFetch({ query });
-  console.log(data.Showcase.images[0]);
 
   return (
     <main className={styles.main}>

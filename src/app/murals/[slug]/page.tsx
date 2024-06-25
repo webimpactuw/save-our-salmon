@@ -89,8 +89,9 @@ const MuralShowcase = async ({
             {VolunteerSection.Title}
           </div>
           <Marquee style={{ width: '100vw', marginBottom: '10rem' }}>
-            {VolunteerSection.Images.map((image: any) => (
+            {VolunteerSection.Images.map((image: any, i: number) => (
               <img
+                key={i}
                 style={{
                   height: '50rem',
                   objectFit: 'cover',
