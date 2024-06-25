@@ -31,7 +31,7 @@ const Press = async () => {
         </span>
       </div>
       <div className={styles.asSeenOn}>As Seen On...</div>
-      <Marquee className={styles.marquee}>
+      <Marquee style={{ width: '100vw' }}>
         {AsSeenOn?.images?.map((link: any, i: number) => (
           <img
             key={i}
@@ -64,7 +64,7 @@ const Press = async () => {
                     </div>
                   </div>
                 </UnstyledLink>
-              )
+              ),
             ) || []
           }
           perPage={3}
