@@ -42,7 +42,7 @@ export const UpcomingMural = ({ name, when, where }: UpcomingMuralProps) => {
         <span>Upcoming Event!</span>
         <br />
         <span className={styles.details}>
-          {when.toLocaleDateString()} —{' '}
+          {when.toDateString()} —{' '}
           {when.toLocaleTimeString(navigator.language, {
             hour: 'numeric',
             minute: '2-digit',

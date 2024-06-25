@@ -19,7 +19,7 @@ export const Paginator = ({
     if (elements.length <= perPage) return;
 
     const cycle = setInterval(() => {
-      setIndex(prev => (prev + 1) % (elements.length / perPage));
+      setIndex(prev => (prev + 1) % Math.ceil(elements.length / perPage));
     }, intervalMS);
 
     return () => clearInterval(cycle);

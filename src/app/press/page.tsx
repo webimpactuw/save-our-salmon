@@ -32,7 +32,7 @@ const Press = async () => {
       </div>
       <div className={styles.asSeenOn}>As Seen On...</div>
       <Marquee className={styles.marquee}>
-        {data.AsSeenOn?.images?.map((link: any, i: number) => (
+        {AsSeenOn?.images?.map((link: any, i: number) => (
           <img
             key={i}
             src={urlFor(link) || ''}
@@ -42,6 +42,7 @@ const Press = async () => {
               margin: '0 5rem',
               objectFit: 'contain',
               objectPosition: '50% 50%',
+              borderRadius: 10,
             }}
           />
         ))}
@@ -52,7 +53,7 @@ const Press = async () => {
           elements={
             Articles?.map(
               ({ Logo, ArticleImage, Link, Caption }: any, i: number) => (
-                <UnstyledLink key={i} href={Link} target="_blank">
+                <UnstyledLink key={i} href={Link || '#'} target="_blank">
                   <div className={styles.genericArticle}>
                     <img className={styles.logo} src={urlFor(Logo) || ''} />
                     <div className={styles.thumbnail}>
@@ -90,7 +91,7 @@ const Press = async () => {
         <Paginator
           elements={
             Podcasts?.map(({ Logo, Link }: any, i: number) => (
-              <UnstyledLink key={i} href={Link} target="_blank">
+              <UnstyledLink key={i} href={Link || '#'} target="_blank">
                 <img className={styles.podcast} src={urlFor(Logo) || ''} />
               </UnstyledLink>
             )) || []

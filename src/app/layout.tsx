@@ -48,14 +48,6 @@ export default function RootLayout({
                 </Link>
                 <Link
                   className={`${styles.link} ${
-                    segment === 'why' ? styles.selected : undefined
-                  }`}
-                  href="/why"
-                >
-                  Why
-                </Link>
-                <Link
-                  className={`${styles.link} ${
                     segment === 'how' ? styles.selected : undefined
                   }`}
                   href="/how"
@@ -88,7 +80,9 @@ export default function RootLayout({
                 </Link>
               </div>
               <div className={styles.donateShop}>
-                <button className={styles.donate}>Donate</button>
+                <UnstyledLink href="/donate">
+                  <button className={styles.donate}>Donate</button>
+                </UnstyledLink>
                 <UnstyledLink href="/shop">
                   <button className={styles.shop}>Shop</button>
                 </UnstyledLink>
