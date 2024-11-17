@@ -12,6 +12,7 @@ import {
 } from 'react-icons/fa';
 import { UnstyledLink } from './components/UnstyledLink';
 import { useSelectedLayoutSegment } from 'next/navigation';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const fredoka = Fredoka({ subsets: ['latin'], variable: '--font-fredoka' });
 
@@ -153,6 +154,7 @@ export default function RootLayout({
           </div>
         </div>
       </body>
+      <GoogleAnalytics gaId="G-WMJ9ECL4TK" />
     </html>
   );
 }
